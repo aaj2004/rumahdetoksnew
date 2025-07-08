@@ -18,6 +18,81 @@
     display: none;  /* Konten tambahan disembunyikan secara default */
 }
 
+
+/* Custom CSS for Service Cards (Lebih Ringkas) */
+.service-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Tambah background-color untuk hover */
+    position: relative;
+    overflow: hidden;
+    display: flex; /* Untuk menengahkan konten secara vertikal */
+    flex-direction: column; /* Konten diatur secara kolom */
+    justify-content: center; /* Tengahkan vertikal */
+    align-items: center; /* Tengahkan horizontal */
+    text-decoration: none; /* Hapus underline jika diubah jadi link */
+    color: inherit; /* Warisi warna teks */
+}
+
+.service-card:hover {
+    transform: translateY(-8px); /* Naik lebih tinggi saat di-hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); /* Bayangan lebih dramatis */
+    background-color: var(--bs-primary); /* Ubah ke warna primary Bootstrap saat di-hover */
+}
+
+.service-card:hover .text-primary,
+.service-card:hover h5 {
+    color: #ffffff !important; /* Ubah warna ikon dan teks menjadi putih saat di-hover */
+}
+
+.service-card i {
+    font-size: 3rem; /* Ikon lebih besar */
+    color: var(--bs-primary); /* Warna ikon default, sesuaikan dengan variabel Bootstrap primary */
+    transition: color 0.3s ease; /* Transisi warna ikon */
+}
+
+.service-card h5 {
+    font-size: 1.15rem; /* Ukuran font judul layanan */
+    font-weight: 600; /* Sedikit lebih tebal */
+    margin-top: 15px; /* Jarak antara ikon dan teks */
+    transition: color 0.3s ease; /* Transisi warna teks */
+}
+
+/* Penyesuaian untuk Tombol Hubungi (desain lebih solid) */
+.btn-primary {
+    background-color: var(--bs-primary); /* Menggunakan variabel Bootstrap primary color */
+    border-color: var(--bs-primary);
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background-color: darken(var(--bs-primary), 10%); /* Sedikit lebih gelap saat hover */
+    border-color: darken(var(--bs-primary), 10%);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Pastikan gambar owner tidak terlalu besar di mobile */
+@media (max-width: 767.98px) {
+    .team-item {
+        max-width: 300px; /* Batasi lebar gambar owner di mobile */
+        margin: auto auto 30px auto; /* Tengahkan gambar owner & beri jarak bawah */
+    }
+    .service-card {
+        padding: 25px; /* Sedikit lebih kecil padding di mobile */
+    }
+}
+
+/* Pastikan Bootstrap variables didefinisikan, jika tidak, ganti dengan kode warna langsung */
+/* Contoh definisi variabel jika belum ada di tempat lain: */
+/* :root {
+    --bs-primary: #007bff; // Contoh warna primary Bootstrap
+} */
+
+
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
