@@ -87,6 +87,27 @@
         });
     });
 
+    $(document).ready(function(){
+    $(".causes-carousel").owlCarousel({
+        // Owl Carousel options here, e.g.:
+        loop: true,
+        margin: 20,
+        nav: true, // This enables navigation arrows
+        dots: false, // You might want dots or not
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            992:{
+                items:3
+            }
+        }
+    });
+    });
+
     
 })(jQuery);
 
